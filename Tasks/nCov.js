@@ -48,6 +48,12 @@ const headers = {
         currentCityMid.push(v);
     }
     });
+    if (currentCityHigh.length == 0){
+        currentCityHigh.push("无");
+    }
+    if (currentCityMid.length == 0){
+        currentCityMid.push("无");
+    }
     let detail =
         "\n「全国数据」" +
         "\n\n    -新增确诊: " +
