@@ -66,15 +66,15 @@ const headers = {
         desc.curedCount +
         "\n    -死亡: " +
         desc.deadCount +
-        "\n「疫情动态」\n     " +
+        "\n\n「疫情动态」\n     " +
         news.title +
-        "\n「动态详情」\n     " +
+        "\n\n「动态详情」\n     " +
         news.summary +
-        `\n「${province}高风险地区」\n     ` +
+        `\n\n「${province}高风险地区」\n     ` +
         currentCityHigh +
-        `\n「${province}中风险地区」\n     ` +
+        `\n\n「${province}中风险地区」\n     ` +
         currentCityMid +
-        "\n    发布时间：" +
+        "\n\n    发布时间：" +
         news.pubDateStr;
     $.notify(title, subtitle, detail);
 })()
