@@ -49,8 +49,8 @@ const headers = {
     }
     });
     let detail =
-        "「全国数据」" +
-        "\n    -新增确诊: " +
+        "\n「全国数据」" +
+        "\n\n    -新增确诊: " +
         desc.confirmedIncr +
         "\n    -新增无症状: " +
         desc.seriousIncr +
@@ -66,13 +66,13 @@ const headers = {
         desc.curedCount +
         "\n    -死亡: " +
         desc.deadCount +
-        "\n\n「疫情动态」\n     " +
+        "\n\n「疫情动态」\n\n     " +
         news.title +
-        "\n\n「动态详情」\n     " +
+        "\n\n「动态详情」\n\n     " +
         news.summary +
-        `\n\n「${province}高风险地区」\n     ` +
+        `\n\n「${province}高风险地区」\n\n     ` +
         currentCityHigh +
-        `\n\n「${province}中风险地区」\n     ` +
+        `\n\n「${province}中风险地区」\n\n     ` +
         currentCityMid +
         "\n\n    发布时间：" +
         news.pubDateStr;
