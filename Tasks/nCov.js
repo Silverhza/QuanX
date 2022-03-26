@@ -34,11 +34,18 @@ const headers = {
     let risk = newslist.riskarea;
     let title = "🗞【疫情信息概览】";
     let subtitle = `📅  ${formatTime()}`;
-    var currentCity = [];
-    let arr = risk.high;
-    arr.forEach(v=>{
+    var currentCityHigh = [];
+    var currentCityMid = [];
+    let high = risk.high;
+    high.forEach(v=>{
     if(v.indexOf(province) != -1) {
-        currentCity.push(v);
+        currentCityHigh.push(v);
+    }
+    });
+    let mid = risk.mid;
+    mid.forEach(v=>{
+    if(v.indexOf(province) != -1) {
+        currentCityMid.push(v);
     }
     });
     let detail =
@@ -58,7 +65,9 @@ const headers = {
         "\n\n「动态详情」\n\n     " +
         news.summary +
         "\n\n「高风险地区」\n\n     " +
-        currentCity +
+        currentCityHigh +
+        "\n\n「中风险地区」\n\n     " +
+        currentCityMid +
         "\n\n    发布时间：" +
         news.pubDateStr;
     $.notify(title, subtitle, detail);
