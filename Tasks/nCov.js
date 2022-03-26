@@ -55,9 +55,9 @@ const headers = {
         "\n    -新增无症状: " +
         desc.seriousIncr +
         "\n    -现有确诊: " +
-        desc.confirmedIncr +
-        "\n    -现有无症状: " +
         desc.currentConfirmedCount +
+        "\n    -现有无症状: " +
+        desc.seriousCount +
         "\n    -累计确诊: " +
         desc.confirmedCount +
         "\n    -治愈: " +
