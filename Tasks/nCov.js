@@ -64,7 +64,7 @@ const headers = {
         news.title +
         "\n\n「动态详情」\n\n     " +
         news.summary +
-        "\n\n「高风险地区」\n\n     " +
+        `\n\n「${province}高风险地区」\n\n     ` +
         currentCityHigh +
         "\n\n「中风险地区」\n\n     " +
         currentCityMid +
