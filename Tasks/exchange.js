@@ -21,7 +21,7 @@ const currencyNames = {
 };
 
 
-$.http.get({url: "https://api.ratesapi.io/api/latest?base=CNY"})
+$.http.get({url: "http://api.exchangeratesapi.io/v1/latest?access_key=d44e564537297035ac804dfdb80b9ed6"})
     .then((response) => {
         const data = JSON.parse(response.body);
         const source = currencyNames[base];
