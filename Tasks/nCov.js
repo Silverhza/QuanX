@@ -54,6 +54,8 @@ const headers = {
         desc.confirmedIncr +
         "\n    -新增无症状: " +
         desc.seriousIncr +
+        "\n    -新增境外输入: " +
+        desc.suspectedIncr +
         "\n    -现有确诊: " +
         desc.currentConfirmedCount +
         "\n    -现有无症状: " +
