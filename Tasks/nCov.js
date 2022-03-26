@@ -66,7 +66,7 @@ const headers = {
         news.summary +
         `\n\n「${province}高风险地区」\n\n     ` +
         currentCityHigh +
-        "\n\n「中风险地区」\n\n     " +
+        `\n\n「${province}中风险地区」\n\n     ` +
         currentCityMid +
         "\n\n    发布时间：" +
         news.pubDateStr;
