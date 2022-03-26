@@ -23,7 +23,7 @@ const headers = {
     $.log(province);
     console.log(province);
     const newslist = await $.http.get({
-        url: "http://api.tianapi.com/txapi/ncov/index?key=5dcf1a3871f36bcc48c543c8193223fc",
+        url: "http://api.tianapi.com/txapi/ncov/index?key=99f29842abf83c3859dfd19ccf6abc4f",
         headers,
     }).then((resp) => JSON.parse(resp.body).newslist[0])
         .delay(1000);
