@@ -34,6 +34,13 @@ const headers = {
     let risk = newslist.riskarea;
     let title = "🗞【疫情信息概览】";
     let subtitle = `📅  ${formatTime()}`;
+    var currentCity = [];
+    let arr = risk.high;
+    arr.forEach(v=>{
+    if(v.indexOf(province)) {
+        currentCity.push(v);
+    }
+    });
     let detail =
         "\n「全国数据」" +
         "\n\n    -新增确诊: " +
@@ -51,7 +58,7 @@ const headers = {
         "\n\n「动态详情」\n\n     " +
         news.summary +
         "\n\n「高风险地区」\n\n     " +
-        risk.high +
+        currentCity +
         "\n\n    发布时间：" +
         news.pubDateStr;
     $.notify(title, subtitle, detail);
