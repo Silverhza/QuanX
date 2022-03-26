@@ -52,7 +52,11 @@ const headers = {
         "\n「全国数据」" +
         "\n\n    -新增确诊: " +
         desc.confirmedIncr +
+        "\n    -新增无症状: " +
+        desc.seriousIncr +
         "\n    -现有确诊: " +
+        desc.confirmedIncr +
+        "\n    -现有无症状: " +
         desc.currentConfirmedCount +
         "\n    -累计确诊: " +
         desc.confirmedCount +
