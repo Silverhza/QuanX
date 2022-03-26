@@ -31,15 +31,11 @@ $.http.get({url: "http://api.exchangeratesapi.io/v1/latest?access_key=d44e564537
             if (key !== base && data.rates.hasOwnProperty(key)) {
                 const rate = parseFloat(data.rates[key]/data.rates[base]);
                 const target = currencyNames[key];
-                if (rate > 1) {
-                    line = `${target[1]} 1${source[0]}兑${roundNumber(rate, digits)}${
-                        target[0]
-                    }\n`;
-                } else {
-                    line = `${target[1]} 1${target[0]}兑${roundNumber(1 / rate, digits)}${
-                        source[0]
-                    }\n`;
-                }
+                line = `${target[1]} 1${source[0]}兑${roundNumber(rate, digits)}${
+                    target[0]
+                }\n   1${target[0]}兑${roundNumber(1 / rate, digits)}${
+                    source[0]
+                }\n`;
             }
             return accumulator + line;
         }, "");
