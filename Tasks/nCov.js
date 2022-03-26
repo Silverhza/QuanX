@@ -37,7 +37,7 @@ const headers = {
     var currentCity = [];
     let arr = risk.high;
     arr.forEach(v=>{
-    if(v.indexOf(province)) {
+    if(v.indexOf(province) != -1) {
         currentCity.push(v);
     }
     });
