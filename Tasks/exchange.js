@@ -33,7 +33,7 @@ $.http.get({url: "http://api.exchangeratesapi.io/v1/latest?access_key=d44e564537
                 const target = currencyNames[key];
                 line = `${target[1]} 1${source[0]}兑${roundNumber(rate, digits)}${
                     target[0]
-                }\n   1${target[0]}兑${roundNumber(1 / rate, digits)}${
+                }   1${target[0]}兑${roundNumber(1 / rate, digits)}${
                     source[0]
                 }\n`;
             }
