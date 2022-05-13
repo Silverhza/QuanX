@@ -55,7 +55,7 @@ const headers = {
         currentCityMid.push("无");
     }
     let detail =
-        "\n「全国数据」" + /*
+        "\n「全国数据」" +
         "\n\n  -新增境外输入: " +
         desc.foreignStatistics.suspectedIncr +
         "\n    -现有确诊: " +
