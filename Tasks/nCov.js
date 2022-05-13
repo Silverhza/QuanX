@@ -55,7 +55,15 @@ const headers = {
         currentCityMid.push("无");
     }
     let detail =
-        "\n「全国数据」" +
+        "\n\n「疫情动态」\n\n     " +
+        news.title +
+        "\n\n「动态详情」\n\n     " +
+        news.summary +
+        `\n\n「${province}高风险地区」\n\n     ` +
+        currentCityHigh +
+        `\n\n「${province}中风险地区」\n\n     ` +
+        currentCityMid +
+        "\n\n「全国数据」" +
         "\n\n    -新增境外输入: " +
         desc.foreignStatistics.suspectedIncr +
         "\n    -现有确诊: " +
@@ -68,14 +76,6 @@ const headers = {
         desc.curedCount +
         "\n    -死亡: " +
         desc.deadCount +
-        "\n\n「疫情动态」\n\n     " +
-        news.title +
-        "\n\n「动态详情」\n\n     " +
-        news.summary +
-        `\n\n「${province}高风险地区」\n\n     ` +
-        currentCityHigh +
-        `\n\n「${province}中风险地区」\n\n     ` +
-        currentCityMid +
         "\n\n    发布时间：" +
         news.pubDateStr;
     $.notify(title, subtitle, detail);
